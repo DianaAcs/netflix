@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <a href="#" class="logo"><img src="img/logo2.png" alt="logo-netflix"></a>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Series</a></li>
+                <li><a href="#">Movies</a></li>
+                <li><a href="#">My list</a></li>
+                
+
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button class="btbuscar"><span class="material-icons">search</span></button>
+            </div>
+        </header>
+        <section class="banner">
+            <img src="img/banner2.jpg" alt="fondo" class="bg"/>
+            <span class="sombraImg"></span>
+            <div class="content">
+                <img src="img/logo.png" alt="" class="movieTitle" width="40">
+            <h4>
+                <span>2023</span>
+                <span><i>+18</i></span>
+                <span>Movie</span>
+            </h4>
+            <p>
+                Una mujer proveniente de uno de los barrios más pobres de la Ciudad de México es una guerrera por naturaleza, una mujer deseada por todos, una apasionada amante que se entrega a dos jóvenes de clase alta viviendo una relación borrascosa y dulce.
+            </p>
+            <div class="buttons">
+                <a href="#">Watch</a>
+                <a href="#">My List</a>
+            </div>
+            </div>
+            <a href="#" class="play" onclick="toggleVideo();"><img src="img/play.png" alt="trailer">Trailer</a>
+        </section>
+        <section class="trailer">
+            <video src="img/trailer.mp4" controls="true"></video>
+            <img src="img/Close.png" alt="" class="close" onclick="toggleVideo();">
+
+        </section>
+    </main>
+    <script>
+        function toggleVideo(){
+            const trailer= document.querySelector(".trailer");
+            const video = document.querySelector("video");
+            trailer.classList.toggle("active");
+            video.currentTime=0;
+            video.pause();
+        }
+    </script>
+</body>
+</html>
